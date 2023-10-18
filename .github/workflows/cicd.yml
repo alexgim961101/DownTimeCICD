@@ -51,8 +51,6 @@ jobs:
           key: ${{ secrets.KEY }}
           envs: GITHUB_SHA
           script: |
-            sudo docker rm -f $(docker ps -qa)
-            docker rmi $(docker images -q)
             sudo docker pull ${{ secrets.DOCKER_REPO }}:app
             sudo ./deploy.sh
             docker image prune -f
