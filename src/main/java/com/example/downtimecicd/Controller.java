@@ -11,6 +11,6 @@ public class Controller {
 
     @GetMapping("/check")
     public ResponseEntity<String> check() {
-        return ResponseEntity.ok("hello spring");
+        return ResponseEntity.ok("hello spring cicd");
     }
 }
